@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Home Monitoring Dashboard</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="apps/static/assets/css/home.css">
+</head>
+<body class="light-theme">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>Rooms</h2>
+    <ul class="room-list">
+      <li>Bedroom <span>3 device(-s)</span></li>
+      <li>Kitchen <span>2 device(-s)</span></li>
+      <li class="active">Living room <span>5 device(-s)</span></li>
+      <li>Bathroom <span>1 device(-s)</span></li>
+    </ul>
+    <button class="add-room">+ Add Room</button>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Header for live cam, temperature, energy, etc. -->
+    <section class="live-camera">
+      <div class="header">
+        <span class="status live">Live</span>
+        <div class="environment-info">
+          <span>24°C</span>
+          <span>50%</span>
+          <span>350W</span>
+          <span>80%</span>
+        </div>
+      </div>
+      <div class="camera-view">
+        <img src="living-room.jpg" alt="Living Room">
+      </div>
+    </section>
+
+    <!-- Widgets Section -->
+    <section class="widgets">
+      <div class="widget robot-vacuum">
+        <h3>Bedroom</h3>
+        <p>Robot vacuum cleaner</p>
+        <div class="status-box">
+          <div class="status-info">
+            <span>90%</span> <small>Filter status</small>
+          </div>
+          <div class="status-info">
+            <span>10:00 AM</span> <small>Next cleaning</small>
+          </div>
+        </div>
+        <div class="summary">
+          <span>75 m²</span>
+          <span>30 min</span>
+          <span>80% Battery</span>
+        </div>
+      </div>
+
+      <div class="widget smart-lamp">
+        <h3>Living Room</h3>
+        <p>Smart Lamp</p>
+        <div class="lamp-control">
+          <span>70%</span>
+          <input type="range" value="70">
+        </div>
+      </div>
+
+      <div class="widget speakers">
+        <h3>Speakers</h3>
+        <p>Playing</p>
+        <div class="media-player">
+          <img src="artist.jpg" alt="Artist">
+          <div class="progress">
+            <span>0:34</span> <span>2:27</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toggle Theme Button -->
+  <button id="theme-toggle">Toggle Theme</button>
+
+  <script src="apps/static/assets/js/home.js"></script>
+</body>
+</html>

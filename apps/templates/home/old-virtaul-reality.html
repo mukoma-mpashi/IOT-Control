@@ -1,0 +1,187 @@
+<!--
+=========================================================
+* Soft UI Dashboard - v1.0.6
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard
+* Copyright 2022 Creative Tim
+* Licensed under MIT (https://www.creative-tim.com/license)
+=========================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ config.ASSETS_ROOT }}/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="{{ config.ASSETS_ROOT }}/img/favicon.png">
+
+  <title>
+    Smart Home Monitoring | Soft UI Dashboard
+  </title>
+
+  <!-- Fonts and icons -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <link href="{{ config.ASSETS_ROOT }}/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="{{ config.ASSETS_ROOT }}/css/nucleo-svg.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <link href="{{ config.ASSETS_ROOT }}/css/nucleo-svg.css" rel="stylesheet" />
+  <link id="pagestyle" href="{{ config.ASSETS_ROOT }}/css/soft-ui-dashboard.css?v=1.0.6" rel="stylesheet" />
+  <link id="pagestyle_dark" href="{{ config.ASSETS_ROOT }}/css/dark-theme-core.css" rel="stylesheet" />
+</head>
+
+<body class="g-sidenav-show bg-gray-100 virtual-reality">
+
+  <div>
+    {% include "includes/navigation.html" %}
+  </div>
+
+  <div class="border-radius-xl mt-3 mx-3 position-relative" style="background-image: url('{{ config.ASSETS_ROOT }}/img/vr-bg.jpg'); background-size: cover;">
+    {% include "includes/sidebar.html" %}
+    <main class="main-content mt-1 border-radius-lg">
+
+      <div class="section min-vh-85 position-relative transform-scale-0 transform-scale-md-7">
+        <div class="container">
+          <div class="row pt-10">
+            <div class="col-lg-1 col-md-1 pt-5 pt-lg-0 ms-lg-5 text-center">
+              <a href="javascript:;" class="avatar avatar-md border-0" data-bs-toggle="tooltip" data-bs-placement="left" title="My Profile">
+                <img class="border-radius-lg" alt="Image placeholder" src="{{ config.ASSETS_ROOT }}/img/team-1.jpg">
+              </a>
+              <button class="btn btn-white border-radius-lg p-2 mt-2" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Home">
+                <i class="fas fa-home p-2"></i>
+              </button>
+              <button class="btn btn-white border-radius-lg p-2" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Search">
+                <i class="fas fa-search p-2"></i>
+              </button>
+              <button class="btn btn-white border-radius-lg p-2" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Minimize">
+                <i class="fas fa-ellipsis-h p-2"></i>
+              </button>
+            </div>
+            <div class="col-lg-8 col-md-11">
+              <div class="d-flex">
+                <div class="me-auto">
+                  <h1 class="display-1 font-weight-bold mt-n4 mb-0">28°C</h1>
+                  <h6 class="text-uppercase mb-0 ms-1">Cloudy</h6>
+                </div>
+                <div class="ms-auto">
+                  <img class="w-50 float-end mt-lg-n4" src="{{ config.ASSETS_ROOT }}/img/small-logos/icon-sun-cloud.png" alt="weather">
+                </div>
+              </div>
+
+              <!-- Device Monitoring Section -->
+              <div class="row mt-4">
+                <!-- Thermostat -->
+                <div class="col-lg-4 col-md-4">
+                  <div class="card move-on-hover overflow-hidden">
+                    <div class="card-body">
+                      <div class="d-flex">
+                        <h6 class="mb-0 me-3">Thermostat</h6>
+                        <h6 class="mb-0">Living Room</h6>
+                      </div>
+                      <div class="d-flex mt-3">
+                        <div>
+                          <h3 class="mb-0">22°C</h3>
+                          <small>Current Temperature</small>
+                        </div>
+                        <div class="ms-auto">
+                          <button class="btn btn-outline-primary">Increase</button>
+                          <button class="btn btn-outline-secondary">Decrease</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Smart Light Bulb -->
+                <div class="col-lg-4 col-md-4">
+                  <div class="card move-on-hover overflow-hidden">
+                    <div class="card-body">
+                      <div class="d-flex">
+                        <h6 class="mb-0 me-3">Smart Light Bulb</h6>
+                        <h6 class="mb-0">Bedroom</h6>
+                      </div>
+                      <div class="d-flex mt-3">
+                        <div>
+                          <span class="badge bg-success">ON</span>
+                        </div>
+                        <div class="ms-auto">
+                          <button class="btn btn-outline-primary">Toggle</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Security Camera -->
+                <div class="col-lg-4 col-md-4">
+                  <div class="card move-on-hover overflow-hidden">
+                    <div class="card-body">
+                      <div class="d-flex">
+                        <h6 class="mb-0 me-3">Security Camera</h6>
+                        <h6 class="mb-0">Front Door</h6>
+                      </div>
+                      <div class="d-flex mt-3">
+                        <div>
+                          <h3 class="mb-0">Active</h3>
+                          <small>Monitoring</small>
+                        </div>
+                        <div class="ms-auto">
+                          <button class="btn btn-outline-danger">Disable</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sensor Data Chart -->
+              <div class="row mt-4">
+                <div class="col-lg-4 col-md-4">
+                  <div class="card move-on-hover overflow-hidden">
+                    <div class="card-body">
+                      <h6 class="mb-0">Temperature Sensor - Backyard</h6>
+                      <canvas id="tempChart"></canvas>
+                      <p class="text-sm">Latest Reading: <strong>25°C</strong></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  {% include "includes/footer.html" %}
+  {% include "includes/fixed-plugin.html" %}
+
+  <!-- Core JS Files -->
+  {% include "includes/scripts.html" %}
+
+  <!-- Chart JS for Temperature Sensor -->
+  <script>
+    var ctx = document.getElementById('tempChart').getContext('2d');
+    var tempChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['10:00', '11:00', '12:00', '13:00', '14:00'], // example times
+        datasets: [{
+          label: 'Temperature',
+          data: [20, 22, 21, 24, 25], // example data
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1
+        }]
+      }
+    });
+  </script>
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="{{ config.ASSETS_ROOT }}/js/soft-ui-dashboard.min.js?v=1.0.6"></script>
+
+</body>
+</html>
